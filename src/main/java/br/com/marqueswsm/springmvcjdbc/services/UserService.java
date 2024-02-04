@@ -1,7 +1,8 @@
 package br.com.marqueswsm.springmvcjdbc.services;
 
 import br.com.marqueswsm.springmvcjdbc.domain.User;
-import br.com.marqueswsm.springmvcjdbc.repositories.Github;
+import br.com.marqueswsm.springmvcjdbc.repositories.GithubClient;
+import br.com.marqueswsm.springmvcjdbc.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,12 +10,12 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
-    private User userRepository;
+    private UserRepository userRepository;
 
     @Autowired
-    private Github githubUser;
+    private GithubClient githubServiceClient;
 
     public User getUser(String username) {
-        return this.githubUser.getProfile(username);
+        return githubServiceClient.getProfile(username);
     }
 }

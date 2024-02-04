@@ -1,4 +1,4 @@
-package br.com.marqueswsm.springmvcjdbc;
+package br.com.marqueswsm.springmvcjdbc.controllers;
 
 import br.com.marqueswsm.springmvcjdbc.domain.User;
 import br.com.marqueswsm.springmvcjdbc.services.UserService;
