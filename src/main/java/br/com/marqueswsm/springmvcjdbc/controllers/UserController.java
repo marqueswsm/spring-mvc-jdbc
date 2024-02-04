@@ -19,4 +19,9 @@ public class UserController {
     public User getUser(@PathVariable String username) {
         return userService.getUser(username);
     }
+
+    @GetMapping("internal/{username}")
+    public User getUserInternal(@PathVariable String username) {
+        return userService.getUserInternal(username);
+    }
 }

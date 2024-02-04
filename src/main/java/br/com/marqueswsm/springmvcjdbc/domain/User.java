@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "github_user")
+@Table(name = "github_users")
 public class User {
     @Id
     private String id;
