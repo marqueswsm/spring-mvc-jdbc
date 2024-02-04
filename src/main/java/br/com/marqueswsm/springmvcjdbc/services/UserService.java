@@ -3,6 +3,7 @@ package br.com.marqueswsm.springmvcjdbc.services;
 import br.com.marqueswsm.springmvcjdbc.domain.User;
 import br.com.marqueswsm.springmvcjdbc.repositories.GithubClient;
 import br.com.marqueswsm.springmvcjdbc.repositories.UserRepository;
+import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,8 @@ public class UserService {
     private GithubClient githubServiceClient;
 
     public User getUser(String username) {
-        return githubServiceClient.getProfile(username);
+        final User user = githubServiceClient.getProfile(username);
+        userRepository.save(user);
+        return user;
     }
 }

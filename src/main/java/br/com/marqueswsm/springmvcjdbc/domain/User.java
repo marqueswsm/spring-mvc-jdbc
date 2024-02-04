@@ -2,8 +2,10 @@ package br.com.marqueswsm.springmvcjdbc.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "github_user")
 public class User {
     @Id
     private String id;
@@ -37,6 +39,8 @@ public class User {
     public void setLogin(String login) {
         this.setUsername(login);
     }
+
+    public User() {}
 
     public User(String id, String username, String name) {
         this.id = id;
