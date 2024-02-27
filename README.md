@@ -24,7 +24,7 @@ This api allows the user to search for a github user by its username and store i
 After the first request to a specific username, the next requests will return the data from the database.
 It is also possible to delete a user from the database by its username.
 
-![Architecture](./images/architecture.png)
+![Architecture](./images/Architecture.png)
 
 ## Endpoints
 
